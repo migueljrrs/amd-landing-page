@@ -1,6 +1,8 @@
 /* GENERAL */
     :root {
         --primary-color: #7367F0;
+        --secondary-color: #FF7E79;
+        --secondary-light-color: #ff9a97;
     }
 
     * {
@@ -100,13 +102,13 @@
         font-size: 18px;
     }	
 	.header-btn{
-		background-color: #e8524c!important;
-		border-color: #e8524c!important;
+		background-color: var(--secondary-color) !important;
+		border-color: var(--secondary-color) !important;
 	}	
 	.header-btn:hover{
-        box-shadow: 0 8px 25px -8px #FF7E79;
-		background-color: #FF7E79!important;
-		border-color: #FF7E79!important;
+        box-shadow: 0 8px 25px -8px var(--secondary-color);
+		background-color: var(--secondary-light-color) !important;
+		border-color: var(--secondary-light-color) !important;
 	}
     .section-title-block{
         text-align: left;
@@ -120,7 +122,7 @@
     }
     .section-title{
         font-size: 34px;
-        color: #6D78FE;
+        color: var(--primary-color);
         margin-bottom: 20px;
         line-height: 1.25;
         font-weight: 700;
@@ -189,7 +191,7 @@
     @media screen and (max-width: 1199.98px){
         .navbar-collapse{
             background-color: #FCFEFE;
-            color: #6D78FE;
+            color: var(--primary-color);
             padding-bottom: 20px;
             padding-top: 20px;
         }
@@ -209,7 +211,7 @@
             padding-right: 20px;
         }
         .nav-link-menu{
-            color: #6D78FE;
+            color: var(--primary-color);
         }
         .nav-item-btn{
             margin-top: 25px;
@@ -253,7 +255,7 @@
         font-size: 59px;        
         font-weight: 800;
         line-height: 1.1;
-        color: #6b75ea;
+        color: var(--primary-color);
         margin-bottom: 0;
     }
     .header-title-section h1 span{
@@ -289,11 +291,6 @@
         line-height: 1.5;
 		max-width: 500px;
     }
-    .header-title-footer a{
-        color: #6D78FE;
-        font-weight: 700;
-		margin-right: 10px;
-    }
     .header-title-footer p{
 		display: block;
 		font-size: 17px;
@@ -303,19 +300,6 @@
         width: 30px;
         height: 30px;
         margin-right: 10px;
-    }
-    .video-btn-title{
-        font-size: 24px;
-        color: #6D78FE;
-        font-weight: 600;
-        margin-bottom: 5px;
-        line-height: 1;
-    }
-    .video-btn-subtitle{
-        color: #0566D8;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1;
     }
     .header-img-section{
         position: relative;
@@ -507,7 +491,7 @@
     }
     .features-details-card-details-section h3{
         font-size: 20px;
-        color: #6D78FE;
+        color: var(--primary-color);
         line-height: 1.2;
         font-weight: 700;
         margin-bottom: 10px;
@@ -546,6 +530,9 @@
         border-radius: 22px;
         box-shadow: 0 0 13px rgba(0,0,0,0.1);
     }
+    .blog-card.featured{
+        border: 7px dashed #ffe8a4;
+    }
     .blog-card-img-section img{
         width: 100%;
 		padding: 0 29px;
@@ -553,13 +540,24 @@
     .blog-card-content-section{
         text-align: left;
         padding: 40px;
-        padding-top: 0;
     }
     .blog-card-cat-btn-section{
         margin: -20px 0 20px 0;;
         display: flex;
         justify-content: flex-end;
-    }   
+    }
+    .featured-label{
+        font-size: 12px;
+        background-color: #F0D84F;
+        color: #FFF;
+        font-weight: bold;
+        height: 30px;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 10px;
+        border-radius: 15px;
+        margin-bottom: 5px;
+    }
     .blog-card-cat-btn{
         font-size: 14px;
         font-weight: 700;
@@ -573,17 +571,28 @@
         margin-bottom: 5px;
     }
     .blog-card-title{
-        font-size: 20px;
-        color: #6D78FE;
+        font-size: 28px;
+        color: var(--primary-color);
         font-weight: 700;
         line-height: 1.5;
-        margin-bottom: 10px;
     }
+    .blog-card-title small{
+        font-size: 16px;
+    }
+    .blog-card-description {
+        font-size: 12px;
+    }
+
+    .blog-card-description strong {
+        color: var(--primary-color);
+    }
+
     .blog-card-details{
         font-size: 16px;
         color: #5B5B5B;
         font-weight: 500;
         line-height: 1.5;
+        margin-bottom: 1rem;
     }   
     .blog-btn-section{
         justify-content: flex-start;
@@ -607,7 +616,7 @@
 		margin: 25px 0 5px 0;
         font-size: 24px;
         font-weight: 700;
-        color: #6D78FE;
+        color: var(--primary-color);
     }
     .contact-details-section p{
         font-size: 16px;
@@ -618,7 +627,7 @@
         padding: 0;
     }
     .contact-us-form-group input{
-        border: 2px dashed #6D78FE;
+        border: 2px dashed var(--primary-color);
         border-radius: 10px;
         margin-top: 10px;
         background: #fff;
@@ -633,7 +642,7 @@
         color: #5B5B5B;
     }
     .contact-us-form-group textarea{
-        border: 2px dashed #6D78FE;
+        border: 2px dashed var(--primary-color);
         border-radius: 10px;
         margin-top: 10px;
         background: #fff;
@@ -675,7 +684,7 @@
 /* 14. FOOTER */    
     .footer-section{
         padding: 40px 0 80px 0;
-        background-color: #6D78FE;
+        background-color: var(--primary-color);
     }
     .footer-section-container{
         display: flex;
