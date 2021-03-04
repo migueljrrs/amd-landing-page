@@ -17,7 +17,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- SCRIPTS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/functions.js"></script>
 </head>
 	<body>
 		<!-- NAVBAR -->
@@ -286,7 +286,7 @@
     	<!-- SECTION LABEL -->
 		<div id="contactSection"></div>		
 			<!-- CONTACT -->
-			<div id="contact" class="contact-section">
+			<div id="contato" class="contact-section">
 				<div class="container contact-section-container">
 					<div class="col-lg-6 col-md-12 contact-section-details-secction">
 						<div class="col-md-12 section-title-block text-center text-lg-left">
@@ -308,25 +308,29 @@
 					</div>
 					<div class="col-lg-6 col-md-12">
 						<div class="form-section">
-							<form class="contact-us-form" method="post" action="contact.php">
+							<form class="contact-us-form" id="form">
+								<div id="feedback"></div>
+
 								<div class="col-md-12 contact-us-form-group">
-									<input type="text" name="full_name" placeholder="Seu nome">
+									<input id="formName" type="text" name="full_name" placeholder="Seu nome" required>
 								</div>
 								<div class="col-md-12 contact-us-form-group">
-									<input type="email" name="email" placeholder="Seu e-mail">
+									<input id="formEmail" type="email" name="email" placeholder="Seu e-mail" required>
+								</div>
+								<div class="col-md-12 contact-us-form-group">
+									<input id="formCel" type="tel" name="celphone" placeholder="Seu celular">
                                     <!-- Leave this here to help prevent SPAM -->
                                     <input type="text" id="website" name="website"/>
 								</div>
 								<div class="col-md-12 contact-us-form-group">
-									<input type="tel" name="celphone" placeholder="Seu celular">
-                                    <!-- Leave this here to help prevent SPAM -->
-                                    <input type="text" id="website" name="website"/>
+									<textarea id="formMessage" type="text" name="message" placeholder="Mensagem" required></textarea>
 								</div>
 								<div class="col-md-12 contact-us-form-group">
-									<textarea type="text" name="message" placeholder="Mensagem"></textarea>
-								</div>
-								<div class="col-md-12 contact-us-form-group">
-									<button class="theme-btn readmore-btn">Enviar mensagem</button>
+									<button id="formSubmit" type="submit" class="theme-btn readmore-btn mr-2">Enviar mensagem</button>
+
+									<div id="formLoad" class="spinner-border spinner-border-sm text-primary" role="status" style="display: none;">
+										<span class="sr-only">Loading...</span>
+									</div>
 								</div>
 							</form>
 						</div>
