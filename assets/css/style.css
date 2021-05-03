@@ -80,6 +80,7 @@
         text-decoration: none;
         background-color: var(--primary-color);
         border-radius: 7px;
+        text-align: center;
     }
     .theme-btn:hover{
         background-color: #9289f3;
@@ -105,6 +106,11 @@
         padding: 10px 20px;
         font-size: 18px;
     }	
+    .header-img-card img {
+        max-width: 260px;
+        margin: 20px auto;
+        display: block;
+    }
 	.header-btn{
 		background-color: var(--secondary-color) !important;
 		border-color: var(--secondary-color) !important;
@@ -348,6 +354,11 @@
     @media screen and (max-width: 767.98px){		
         .header-title-footer a{
             margin-right: 0;
+        }
+    }
+    @media screen and (min-width: 992px){	
+        .header-img-card img {
+            max-width: max-content;
         }
     }
 /* 5. ABOUT */  
@@ -611,6 +622,12 @@
     }
     .contact-details-section{
         margin-top: 20px
+    }
+    .contact-details-section.whats h3 a {
+        color: #1cb39b;
+    }
+    .contact-details-section.whats p a {
+        color: inherit;
     }
     .contact-details-section h3{
 		margin: 25px 0 5px 0;
